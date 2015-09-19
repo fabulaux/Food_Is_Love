@@ -18,7 +18,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	<link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+	<script src="https://vjs.zencdn.net/4.12/video.js"></script>
 
     <link href="./styles/main.css" rel="stylesheet">
     
@@ -48,6 +49,14 @@
 	        height: 130px;
         }
         
+        .vjs-big-play-button {
+        	border: none !important;
+        	box-shadow: none !important;
+	        background-color: rgba(0,0,0,0) !important;
+        }
+        .vjs-big-play-button:before {
+	       content: '' !important;
+        }
 
         
     </style>
@@ -56,6 +65,13 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
+<video id="example_video_1" class="video-js vjs-default-skin"
+  controls preload="auto" width="640" height="264"
+  poster="./images/bombo_poster.png"
+  data-setup='{"example_option":true}'>
+ <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+</video>
+
 
     <div class="row featurette lead-photo" style="background-image: url('./images/cinemagraph2.gif'); background-size: cover; background-position: center center; background-repeat: no-repeat; border-top: 5px solid #87E773;">
 
@@ -73,7 +89,7 @@
       
       
 
-    <div class="row featurette lead-photo" style="background-image: url('./images/mainvidposter.png'); background-size: cover; background-position: center center;  border-top: 5px solid #9F1C80;">
+    <div id="foodislove" class="row featurette lead-photo" style="background-image: url('./images/mainvidposter.png'); background-size: cover; background-position: center center;  border-top: 5px solid #9F1C80;">
       <div class="col-md-7 col-lg-7" style="padding: 80px;">
 	    <div class="video-play"></div>
 	    <h2>WATCH | 4:18</h2>
@@ -122,7 +138,7 @@
 -->
 
     <div>
-      <div class="row featurette lead-photo" style="background-image: url('./images/belcampo.png'); background-size: cover; background-position: center center; height: 600px;  border-top: 5px solid #E06043;">
+      <div id="belcampo" class="row featurette lead-photo" style="background-image: url('./images/belcampo.png'); background-size: cover; background-position: center center; height: 600px;  border-top: 5px solid #E06043;">
 	      <div class="col-md-7 col-lg-7" style="padding: 80px">
 		    <div class="video-play"></div>
 		    <h2>WATCH | 4:18</h2>
@@ -190,7 +206,7 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
 
     <div>
 
-      <div class="row featurette lead-photo" style="background-image: url('./images/bombo_poster.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #FFFA8E;">
+      <div id="bombo" class="row featurette lead-photo" style="background-image: url('./images/bombo_poster.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #FFFA8E;">
      	  <div class="col-md-7 col-lg-7" style="padding: 80px">
 		    <div class="video-play"></div>
 		    <h2>WATCH | 4:18</h2>
@@ -259,7 +275,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 
     <div>
 
-      <div class="row featurette lead-photo" style="background-image: url('./images/gcmvideo.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #E0A64E;">
+      <div id="gcm" class="row featurette lead-photo" style="background-image: url('./images/gcmvideo.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #E0A64E;">
 
 	      <div class="col-md-12 col-lg-12" style="padding: 80px">
 		    <div class="video-play"></div>
@@ -299,7 +315,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 
     <div>
 
-      <div class="row featurette lead-photo" style="background-image: url('./images/stvincent.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #419BF9;">
+      <div id="mow" class="row featurette lead-photo" style="background-image: url('./images/stvincent.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #419BF9;">
 	      <div class="col-md-7 col-lg-7" style="padding: 80px">
 		    <div class="video-play"></div>
 		    <h2>WATCH | 6:32</h2>
@@ -352,6 +368,31 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
          <p style="color: #FFF; font-size: 320%; font-weight: 200;">JOIN <strong>ST. VINCENT MEALS ON WHEELS</strong> AND <strong>GRAND CENTRAL MARKET</strong> AS THEY CELEBRATE <strong>#FOODISLOVE</strong></p>
        </div> 
     </div>
+    
+    
+    <div class="row featurette" style="padding: 60px 0 0 0; text-align: center;">
+        <div class="col-md-6 col-lg-6">
+	       <a href="#"><img src="./images/ticket_cta.png" width="300"></a>
+        </div>
+        <div class="col-md-6 col-lg-6">
+	      <ul style="list-style: none;">
+			  <li style="display: inline; margin-right: 10px;">
+			    <a href="#"><img src="./images/twitter.png" width="40"></a>
+			  </li>
+			  <li style="display: inline; margin-right: 10px;">
+				<a href="#"><img src="./images/facebook.png" width="40"></a>  
+			  </li>
+			  <li style="display: inline;">
+				<a href="#"><img src="./images/instagram.png" width="40"></a>
+			  </li>  
+		   </ul>  
+        </div>
+        
+        
+        
+    
+
+    </div>
       
       
     <!--  
@@ -369,6 +410,11 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
    
+
+<script>
+  $('#example_video_1').play();	
+	
+</script>
 
     <script>
 	  $('.lead-photo').css('height', $(window).height() - .1*$(window).height());
