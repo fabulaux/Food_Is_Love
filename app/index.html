@@ -24,20 +24,7 @@
     <link href="./styles/main.css" rel="stylesheet">
     
     <style>
-        .play-indicator h2 {
-	        display: inline-block;
-	        position: relative;
-	        top: -60px;
-	        margin-left: 10px;
-        }
-        
-        .video-play {
-	        background-image: url('./images/play.png');
-	        background-size: 100%;
-	        width: 130px;
-	        height: 130px;
-	        display: inline-block;
-        }
+
         
         .vjs-big-play-button {
         	border: none !important;
@@ -56,8 +43,133 @@
         .vid-trigger:hover {
 	        cursor: pointer;
         }
+        
+        h1, h2, h4 { 
+	      color: #FFF;
+        }
+        
+        h1, h4 {
+	       text-transform: uppercase;
 
-      @media (min-width: 768px) {
+        }
+        
+      
+      @media (max-width: 480px) {
+	     #start img {
+	         position: relative;
+	         top: -20px;
+         }
+      
+         h1 {
+	        font-size: 220%;
+            text-shadow: 0 2px #333;
+            text-align: center;
+            font-weight: 700;
+         }
+         
+         h4 {
+	         width: 300px;
+         }
+	    
+	    .play-indicator h2 {
+	        display: inline-block;
+	        position: relative;
+	        top: -105px;
+	        margin-left: 120px;
+	        font-size: 140%;
+	        margin-top: -10px;
+
+        }
+        
+        .video-play {
+	        background-image: url('./images/play.png');
+	        background-size: 100%;
+	        width: 100px;
+	        height: 100px;
+	        display: inline-block;
+	        position: relative;
+	        top: -40px;
+        }
+        
+        .lead-photo h4 {
+	       font-size: 160% !important;
+           font-weight: bold;
+           position: relative;
+           top: -40px;
+           margin-bottom: -30px;
+        }
+        
+        .lead-photo {
+           text-shadow: 0 2px #333;	        
+        }
+       
+        .call-out {
+	        text-align: left !important;
+	        margin-left: -10px;
+	        margin-top: 30px;
+        }
+        
+        .call-out small {
+	        margin-left: 30px;
+        }
+        
+        #celebrate p {
+	        font-size: 150% !important;
+        }
+
+      }
+      
+      @media (max-width: 767px) {
+
+        #gcm-mission {
+	        height: 750px !important;
+        }
+        
+        #gcm-mission img {
+	        width: 300px !important;
+	        position: relative;
+	        left: 40px;
+        }          
+      }
+
+
+      @media (max-width: 768px) {
+
+        h4 {
+	       font-size: 300% !important;
+        } 
+        
+        #gcm-mission {
+	        height: 650px !important;
+        }
+        
+        #gcm-mission h3 {
+	        position: relative;
+	        top: -50px;
+        }
+        
+        #gcm-mission p {
+	        position: relative;
+	        top: -30px;
+        }
+        
+        #gcm-mission img {
+	        position: relative;
+	        top: -200px;
+        }
+       
+        #social .right {
+	        text-align: left !important;
+	        margin-top: 50px !important;
+	        margin-left: -40px !important;
+        }
+         
+      }
+      
+
+      @media (min-width: 480px) {
+   
+      
         h1 {
           color: #FFF;
           text-transform: uppercase;
@@ -90,8 +202,24 @@
   	      font-size: 130%;
   	      line-height: 190%;   
         }
+        
+        .play-indicator h2 {
+	        display: inline-block;
+	        position: relative;
+	        top: -60px;
+	        margin-left: 10px;
+        }
+        
+        .video-play {
+	        background-image: url('./images/play.png');
+	        background-size: 100%;
+	        width: 130px;
+	        height: 130px;
+	        display: inline-block;
+        }
 
      }
+
 
 
         
@@ -139,7 +267,7 @@
 
     <div id="gcm-mission" class="row featurette lead-photo" style="background-image: url('./images/gcmhistory.png'); background-size: cover; background-position: center center; color: #FFF; border-top: 5px solid #3D3431;">
 
-      <div class="col-md-7 col-lg-7" style="padding: 80px;">
+      <div class="col-sm-7 col-md-7 col-lg-7" style="padding: 80px;">
         <h3>Grand Central Market’s mission is to celebrate the cuisines and cultures of<br>
 Los Angeles.
         </h3>
@@ -148,8 +276,8 @@ Los Angeles.
 
 </p>
       </div>
-      <div class="col-md-5 col-lg-5" style="padding-top: 80px;">
-	    <img src="./images/gcm.png" style="width: 400px;">
+      <div class="col-sm-5 col-md-5 col-lg-5" style="padding-top: 80px;">
+	    <img src="./images/gcm.png" style="width: 100%;">
       </div>
     
 
@@ -179,16 +307,13 @@ Los Angeles.
       <div class="container marketing" style="background: #FFF; width: 100%; padding: 80px 50px;">
 
         <div class="row featurette">
-          <div class="col-md-7 col-lg-7">
-            <div class="col-md-12 col-lg-12">
-	          <div class="col-md-4 col-lg-4" style="padding: 0 20px 0 0;">
-	             <img src="./images/butcher_1.gif">
+          <div class="col-sm-7 col-md-7 col-lg-7">
+            <div class="col-sm-12 col-md-12 col-lg-12" style="margin-left: 0; padding-left: 20px;">
+	          <div class="gif-feat col-sm-4 col-md-4 col-lg-4" style="background-image: url('./images/butcher_1.gif'); height: 100px; width: 200px; background-size: cover; background-repeat: no-repeat; margin-right: 10px;">
 	          </div>
-	          <div class="col-md-4 col-lg-4" style="padding: 0 20px 0 0;">
-	             <img src="./images/butcher_2.gif">
+	          <div class="gif-feat col-sm-4 col-md-4 col-lg-4" style="background-image: url('./images/butcher_2.gif'); height: 100px; width: 200px;  background-size: cover; background-repeat: no-repeat; margin-right: 10px;">
 	          </div>
-	          <div class="col-md-4 col-lg-4" style="padding: 0 20px 0 0;">
-	             <img src="./images/butcher_3.gif">
+	          <div class="gif-feat col-sm-4 col-md-4 col-lg-4" style="background-image: url('./images/butcher_3.gif'); height: 100px; width: 200px;  background-size: cover; background-repeat: no-repeat;">
 	          </div>	          
           </div>        
           <div class="col-md-12 col-lg-12">
@@ -208,7 +333,7 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
         
         </div>
 
-        <div class="col-md-5 col-lg-5" style="text-align: center; ">
+        <div class="call-out col-sm-5 col-md-5 col-lg-5" style="text-align: center; ">
           <p class="lead" style="padding: 0 30px; color: #973816; font-weight: bold; font-size: 180%;">“I see everyone as my friends and neighbors… it’s less a transaction and more a conversation…”</p>
           <small style="display: block; color: #973816;">
             - <strong>Jared Standing</strong><br>
@@ -246,7 +371,7 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
   
 
       <div class="row featurette">
-        <div class="col-md-5 col-lg-5" style="text-align: center;">
+        <div class="call-out col-sm-5 col-md-5 col-lg-5" style="text-align: center; margin-bottom: 20px;">
           <p class="lead" style="padding: 0 30px;  color: #D59840; font-weight: bold; font-size: 180%;">“I’m bringing everything I’ve done for the past 40 years and making it accessible…”</p>
           <small style="display: block; color: #D59840;">
             - <strong>Chef Mark Peel</strong><br>
@@ -255,7 +380,7 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
           </small>        
         </div>
 
-        <div class="col-md-7 col-lg-7">
+        <div class="col-sm-7 col-md-7 col-lg-7">
           
           <div class="col-md-12 col-lg-12">
 	          <div class="col-md-4 col-lg-4" style="padding: 0 20px 0 0;">
@@ -299,7 +424,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
       <div id="gcm" class="row featurette lead-photo" style="background-image: url('./images/gcmvideo.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #E0A64E;">
 
      <div class="vid-trigger">
-	      <div class="col-md-12 col-lg-12" style="padding: 80px">
+	      <div class="col-sm-12 col-md-12 col-lg-12" style="padding: 80px">
 		    <div class="play-indicator">
   	          <span class="video-play"></span>
 	          <h2>WATCH | 1:30</h2>  
@@ -336,7 +461,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
       <div id="mow" class="row featurette lead-photo" style="background-image: url('./images/stvincent.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #419BF9;">
      <div class="vid-trigger">
 
-	      <div class="col-md-12 col-lg-12" style="padding: 80px">
+	      <div class="col-sm-12 col-md-12 col-lg-12" style="padding: 80px">
 		    <div class="play-indicator">
   	          <span class="video-play"></span>
 	          <h2>WATCH | 3:56</h2>  
@@ -357,7 +482,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 	 
 	
 	      <div class="row featurette">
-	        <div class="col-md-7 col-lg-7" style="padding: 0;">
+	        <div class="col-sm-7 col-md-7 col-lg-7" style="padding: 0;">
 				<p>
 				St. Vincent Meals on Wheels serves anyone in need that lives within our service area, regardless of age, race, illness, disability, religion or ability to pay.
 				</p>
@@ -374,7 +499,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 	        
 	        </div>
 	        
-	        <div class="col-md-5 col-lg-5" style="text-align: center;">
+	        <div class="call-out col-sm-5 col-md-5 col-lg-5" style="text-align: center;">
 	          <p class="lead" style="padding: 0 30px;  color: #419BF9; font-weight: bold; font-size: 180%;">“I’m bringing everything I’ve done for the past 40 years and making it accessible…”</p>
 	          <small style="display: block; color: #419BF9;">
 	            - <strong>Chef Mark Peel</strong><br>
@@ -391,18 +516,18 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
     </div>
 
 
-    <div class="row featurette" style="background: #6ED758; padding: 60px;">
+    <div id="celebrate" class="row featurette" style="background: #6ED758; padding: 60px;">
 	   <div class="col-md-12 col-lg-12">
          <p style="color: #FFF; font-size: 320%; font-weight: 200;">JOIN <strong>ST. VINCENT MEALS ON WHEELS</strong> AND <strong>GRAND CENTRAL MARKET</strong> AS THEY CELEBRATE <strong>#FOODISLOVE</strong></p>
        </div> 
     </div>
     
     
-    <div class="row featurette" style="padding: 60px;">
-        <div class="col-md-6 col-lg-6">
+    <div id="social" class="row featurette" style="padding: 60px;">
+        <div class="col-sm-6 col-md-6 col-lg-6">
 	       <a href="#"><img src="./images/ticket_cta.png" width="300"></a>
         </div>
-        <div class="col-md-6 col-lg-6" style="text-align: right; margin-top: 15px;">
+        <div class="right col-sm-6 col-md-6 col-lg-6" style="text-align: right; margin-top: 15px;">
 	      <ul style="list-style: none;">
 			  <li style="display: inline; margin-right: 10px;">
 			    <a href="#"><img src="./images/twitter.png" width="40"></a>
@@ -474,7 +599,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 	  
       if ($(window).width() <= 450) {
 	    $('.lead-photo').css('height', $(window).height()/2);
-		 
+	    $('#start').css('height', $(window).height() - .1*$(window).height()); 
 	  }
 
 
@@ -482,7 +607,10 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 		 $('.lead-photo').css('height', $(window).height() - .1*$(window).height());
 		 
 		 if ($(window).width() <= 450) {
-		   $('.lead-photo').css('height', $(window).height()/2);
+
+
+	        $('.lead-photo').css('height', $(window).height()/2);
+	        $('#start').css('height', $(window).height() - .1*$(window).height());
 			 
 		 }
 	
