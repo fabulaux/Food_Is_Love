@@ -57,6 +57,15 @@
         .vjs-big-play-button:before {
 	       content: '' !important;
         }
+        
+        
+        .vid-trigger {
+	        height: 100%;
+	        display: block;
+        }
+        .vid-trigger:hover {
+	        cursor: pointer;
+        }
 
         
     </style>
@@ -65,13 +74,7 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-<video id="example_video_1" class="video-js vjs-default-skin"
-  controls preload="auto" width="640" height="264"
-  poster="./images/bombo_poster.png"
-  data-setup='{"example_option":true}'>
- <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
-</video>
-
+<!--<div id="test" style="background: red; height: 50px; width: 200px;"></div>-->
 
     <div class="row featurette lead-photo" style="background-image: url('./images/cinemagraph2.gif'); background-size: cover; background-position: center center; background-repeat: no-repeat; border-top: 5px solid #87E773;">
 
@@ -90,6 +93,7 @@
       
 
     <div id="foodislove" class="row featurette lead-photo" style="background-image: url('./images/mainvidposter.png'); background-size: cover; background-position: center center;  border-top: 5px solid #9F1C80;">
+     <div class="vid-trigger">
       <div class="col-md-7 col-lg-7" style="padding: 80px;">
 	    <div class="video-play"></div>
 	    <h2>WATCH | 4:18</h2>
@@ -98,6 +102,7 @@
 		  #FoodIsLove?  
 	    </h4>
 	  </div>
+     </div>
 	</div>
 
 
@@ -139,6 +144,7 @@
 
     <div>
       <div id="belcampo" class="row featurette lead-photo" style="background-image: url('./images/belcampo.png'); background-size: cover; background-position: center center; height: 600px;  border-top: 5px solid #E06043;">
+        <div class="vid-trigger">
 	      <div class="col-md-7 col-lg-7" style="padding: 80px">
 		    <div class="video-play"></div>
 		    <h2>WATCH | 4:18</h2>
@@ -148,6 +154,7 @@
 		    </h4>
 		    <p style="color: #FFF;">Featured Vendor</p>
 		  </div>
+        </div>
       </div>
     
       <div class="container marketing" style="background: #FFF; width: 100%; padding: 80px 50px;">
@@ -207,6 +214,8 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
     <div>
 
       <div id="bombo" class="row featurette lead-photo" style="background-image: url('./images/bombo_poster.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #FFFA8E;">
+     <div class="vid-trigger">
+
      	  <div class="col-md-7 col-lg-7" style="padding: 80px">
 		    <div class="video-play"></div>
 		    <h2>WATCH | 4:18</h2>
@@ -215,6 +224,7 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
 		    </h4>
 		    <p style="color: #FFF;">Featured Vendor</p>
 		  </div> 
+     </div>
       </div>
 
 
@@ -277,6 +287,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 
       <div id="gcm" class="row featurette lead-photo" style="background-image: url('./images/gcmvideo.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #E0A64E;">
 
+     <div class="vid-trigger">
 	      <div class="col-md-12 col-lg-12" style="padding: 80px">
 		    <div class="video-play"></div>
 		    <h2>WATCH | 6:32</h2>
@@ -286,7 +297,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 		    </h4>
 		    <p style="color: #FFF;">Our Sponsor</p>
 		  </div>
-
+     </div>
       </div>
 
 
@@ -316,6 +327,8 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
     <div>
 
       <div id="mow" class="row featurette lead-photo" style="background-image: url('./images/stvincent.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #419BF9;">
+     <div class="vid-trigger">
+
 	      <div class="col-md-7 col-lg-7" style="padding: 80px">
 		    <div class="video-play"></div>
 		    <h2>WATCH | 6:32</h2>
@@ -325,6 +338,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 		    </h4>
 		    <p style="color: #FFF;">Featured Charity</p>
 		  </div>
+     </div>
       </div>
 
 
@@ -412,8 +426,42 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
    
 
 <script>
-  $('#example_video_1').play();	
+
+  $('#foodislove .vid-trigger').click(function() {
+    $('#foodislove').html('<video id="foodislovevid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="./images/WhatIsFoodIsLove.mp4" type="video/mp4" /> </video>');
+    
+    var myPlayer = videojs('foodislovevid');  
+    myPlayer.play();
+  });
+  
+  
+  $('#belcampo .vid-trigger').click(function() {
+    $('#belcampo').html('<video id="belcampovid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" /> </video>');
+    
+    var myPlayer = videojs('belcampovid');  
+    myPlayer.play();
+  });
+
+  $('#bombo .vid-trigger').click(function() {
+    $('#bombo').html('<video id="bombovid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" /> </video>');
+    
+    var myPlayer = videojs('bombovid');  
+    myPlayer.play();
+  });    	
 	
+  $('#gcm .vid-trigger').click(function() {
+    $('#gcm').html('<video id="gcmvid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="./images/GCMHistory.mp4" type="video/mp4" /> </video>');
+    
+    var myPlayer = videojs('gcmvid');  
+    myPlayer.play();
+  });    	
+
+  $('#mow .vid-trigger').click(function() {
+    $('#mow').html('<video id="mowvid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="./images/MealsOnWheels.mp4" type="video/mp4" /> </video>');
+    
+    var myPlayer = videojs('mowvid');  
+    myPlayer.play();
+  });    
 </script>
 
     <script>
