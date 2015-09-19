@@ -55,58 +55,72 @@
         
       
       @media (max-width: 480px) {
-	     #start img {
-	         position: relative;
-	         top: -20px;
-         }
-      
+		 #start img {
+			 width: 100% !important;
+		 }
+
+
          h1 {
-	        font-size: 220%;
+	        font-size: 120% !important;
+	        line-height: 170%;
+	        width: 100%;
             text-shadow: 0 2px #333;
             text-align: center;
             font-weight: 700;
          }
          
-         h4 {
-	         width: 300px;
-         }
-	    
 	    .play-indicator h2 {
 	        display: inline-block;
 	        position: relative;
-	        top: -105px;
-	        margin-left: 120px;
-	        font-size: 140%;
-	        margin-top: -10px;
+	        top: -59px;
+	        font-size: 100%;
+	        margin-bottom: 70px;
 
         }
         
         .video-play {
 	        background-image: url('./images/play.png');
 	        background-size: 100%;
-	        width: 100px;
-	        height: 100px;
+	        width: 80px;
+	        height: 80px;
 	        display: inline-block;
 	        position: relative;
-	        top: -40px;
+	        top: -23px;
         }
         
         .lead-photo h4 {
 	       font-size: 160% !important;
            font-weight: bold;
            position: relative;
-           top: -40px;
-           margin-bottom: -30px;
+           top: -90px;
+           margin-bottom: -90px;
+           width: 200px;
         }
         
         .lead-photo {
            text-shadow: 0 2px #333;	        
+        }
+        
+        .bombo.call-out {
+	       margin-top: -30px !important;
+        }
+        
+        .mow.call-out {
+	       position: relative;
+	       left: -35px;
+	       padding-right: 0;
+	       width: 250px !important;
         }
        
         .call-out {
 	        text-align: left !important;
 	        margin-left: -10px;
 	        margin-top: 30px;
+        }
+        
+        
+        .call-out .lead {
+	        font-size: 120% !important;
         }
         
         .call-out small {
@@ -125,18 +139,19 @@
 	        height: 750px !important;
         }
         
+        /*
         #gcm-mission img {
 	        width: 300px !important;
 	        position: relative;
 	        left: 40px;
-        }          
+        }*/          
       }
 
 
       @media (max-width: 768px) {
 
         h4 {
-	       font-size: 300% !important;
+	       font-size: 160% !important;
         } 
         
         #gcm-mission {
@@ -152,6 +167,7 @@
 	        position: relative;
 	        top: -30px;
         }
+        
         
         #gcm-mission img {
 	        position: relative;
@@ -233,7 +249,7 @@
     <div id="start" class="row featurette lead-photo" style="background-image: url('./images/cinemagraph4.gif'); background-size: cover; background-position: center center; background-repeat: no-repeat; border-top: 5px solid #87E773;">
 
       <div class="col-md-12 col-lg-12" style="padding: 80px; text-align: left;">
-        <img src="./images/eventlogo.png" style="width: 300px;">
+        <img src="./images/eventlogo.png" style="width: 33%;">
         <h1>
           Feeding Los Angeles Through<br>
 	      Community and Contribution
@@ -268,8 +284,7 @@
     <div id="gcm-mission" class="row featurette lead-photo" style="background-image: url('./images/gcmhistory.png'); background-size: cover; background-position: center center; color: #FFF; border-top: 5px solid #3D3431;">
 
       <div class="col-sm-7 col-md-7 col-lg-7" style="padding: 80px;">
-        <h3>Grand Central Market’s mission is to celebrate the cuisines and cultures of<br>
-Los Angeles.
+        <h3>Grand Central Market’s mission is to celebrate the cuisines and cultures of Los Angeles.
         </h3>
         <p>
         And #FoodIsLove will allow St. Vincent Meals on Wheels to keep delivering nutritious meals to homebound seniors and other vulnerable residents across the Los Angeles community 365 days a year.
@@ -371,7 +386,7 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
   
 
       <div class="row featurette">
-        <div class="call-out col-sm-5 col-md-5 col-lg-5" style="text-align: center; margin-bottom: 20px;">
+        <div class="bombo call-out col-sm-5 col-md-5 col-lg-5" style="text-align: center; margin-bottom: 20px;">
           <p class="lead" style="padding: 0 30px;  color: #D59840; font-weight: bold; font-size: 180%;">“I’m bringing everything I’ve done for the past 40 years and making it accessible…”</p>
           <small style="display: block; color: #D59840;">
             - <strong>Chef Mark Peel</strong><br>
@@ -440,7 +455,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
       </div>
 
 
-      <div class="container marketing" style="background: #FFF; width: 100%; padding: 80px 50px;">
+      <div class="container marketing" style="background: #FFF; width: 100%; padding: 50px;">
 
 	      <div class="row featurette" style="padding: 0 10px;">
 	        <div class="col-md-12 col-lg-12">
@@ -499,7 +514,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 	        
 	        </div>
 	        
-	        <div class="call-out col-sm-5 col-md-5 col-lg-5" style="text-align: center;">
+	        <div class="mow call-out col-sm-5 col-md-5 col-lg-5" style="text-align: center;">
 	          <p class="lead" style="padding: 0 30px;  color: #419BF9; font-weight: bold; font-size: 180%;">“The whole program for us is seeing them as an individual what their needs are and if possible [...] for us to meet their needs with dignity and compassion.”</p>
 	          <small style="display: block; color: #419BF9;">
 	            - <strong>Sister Alice Marie</strong><br>
@@ -524,7 +539,7 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
     
     <div id="social" class="row featurette" style="padding: 60px;">
         <div class="col-sm-6 col-md-6 col-lg-6">
-	       <a href="https://stvincentmow.org/donate/foodislove"><img src="./images/ticket_cta.png" width="300"></a>
+	       <a href="https://stvincentmow.org/donate/foodislove"><img src="./images/ticket_cta.png" width="100%"></a>
         </div>
         <div class="right col-sm-6 col-md-6 col-lg-6" style="text-align: right; margin-top: 15px;">
 	      <ul style="list-style: none;">
