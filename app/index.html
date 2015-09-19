@@ -24,22 +24,11 @@
     <link href="./styles/main.css" rel="stylesheet">
     
     <style>
-        h1 {
-          color: #FFF;
-          text-transform: uppercase;
-          font-weight: 700;
-          text-shadow: 0 2px #333;
-        }
-        
-        h2 {
-          color: #FFF;
-        }
-        
-        h4 {
-	      color: #FFF;
-	      text-transform: uppercase;
-	      font-size: 530%;
-	      font-weight: bold;
+        .play-indicator h2 {
+	        display: inline-block;
+	        position: relative;
+	        top: -60px;
+	        margin-left: 10px;
         }
         
         .video-play {
@@ -47,6 +36,7 @@
 	        background-size: 100%;
 	        width: 130px;
 	        height: 130px;
+	        display: inline-block;
         }
         
         .vjs-big-play-button {
@@ -67,6 +57,43 @@
 	        cursor: pointer;
         }
 
+      @media (min-width: 768px) {
+        h1 {
+          color: #FFF;
+          text-transform: uppercase;
+          font-weight: 700;
+          text-shadow: 0 2px #333;
+        }
+        
+        h2 {
+          color: #FFF;
+        }
+        
+        h4 {
+	      color: #FFF;
+	      text-transform: uppercase;
+	      font-size: 530%;
+	      font-weight: bold;
+        }
+        
+        #start h1 {
+	        line-height: 130%;
+        }
+        
+        #gcm-mission h3 {
+	       line-height: 150%;
+	       font-size: 200%;
+	       font-weight: bold;
+        }
+        
+        #gcm-mission p {
+  	      font-size: 130%;
+  	      line-height: 190%;   
+        }
+
+     }
+
+
         
     </style>
 
@@ -74,9 +101,8 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-<!--<div id="test" style="background: red; height: 50px; width: 200px;"></div>-->
 
-    <div class="row featurette lead-photo" style="background-image: url('./images/cinemagraph2.gif'); background-size: cover; background-position: center center; background-repeat: no-repeat; border-top: 5px solid #87E773;">
+    <div id="start" class="row featurette lead-photo" style="background-image: url('./images/cinemagraph2.gif'); background-size: cover; background-position: center center; background-repeat: no-repeat; border-top: 5px solid #87E773;">
 
       <div class="col-md-12 col-lg-12" style="padding: 80px; text-align: left;">
         <img src="./images/eventlogo.png" style="width: 300px;">
@@ -95,8 +121,11 @@
     <div id="foodislove" class="row featurette lead-photo" style="background-image: url('./images/mainvidposter.png'); background-size: cover; background-position: center center;  border-top: 5px solid #9F1C80;">
      <div class="vid-trigger">
       <div class="col-md-7 col-lg-7" style="padding: 80px;">
-	    <div class="video-play"></div>
-	    <h2>WATCH | 4:18</h2>
+	    <div class="play-indicator">
+  	      <span class="video-play"></span>
+	      <h2>WATCH | 4:18</h2>  
+	    </div>
+	    
 	    <h4>
 		  What is<br>
 		  #FoodIsLove?  
@@ -108,16 +137,19 @@
 
 
 
-    <div class="row featurette lead-photo" style="background-image: url('./images/gcmhistory.png'); background-size: cover; background-position: center center; color: #FFF; border-top: 5px solid #3D3431;">
+    <div id="gcm-mission" class="row featurette lead-photo" style="background-image: url('./images/gcmhistory.png'); background-size: cover; background-position: center center; color: #FFF; border-top: 5px solid #3D3431;">
 
       <div class="col-md-7 col-lg-7" style="padding: 80px;">
-        <h3>GRAND CENTRAL MARKET</h3>
-        <p style="font-size: 160%;">
-        From food, community. Grand Central Market's mission is to celebrate the cuisines and cultures of Los Angeles. Our commitment is to preserve the legacy of a historic downtown landmark, to gather the city's many communities around a shared table, and to nurture the next generation of local businesses.<br><br><span style="font-style: italic;">GrandCentralMarket.com</span>
-        </p>
+        <h3>Grand Central Market’s mission is to celebrate the cuisines and cultures of<br>
+Los Angeles.
+        </h3>
+        <p>
+        And #FoodIsLove will allow St. Vincent Meals on Wheels to keep delivering nutritious meals to homebound seniors and other vulnerable residents across the Los Angeles community 365 days a year.
+
+</p>
       </div>
-      <div class="col-md-5 col-lg-5" style="padding: 80px;">
-	    <img src="./images/gcm.png" style="width: 300px;">
+      <div class="col-md-5 col-lg-5" style="padding-top: 80px;">
+	    <img src="./images/gcm.png" style="width: 400px;">
       </div>
     
 
@@ -125,30 +157,17 @@
 
 
 
-<!--    
-      <div class="row featurette" style="background-image: url('./images/GCMHistory.jpg'); background-size: cover; background-position: center -70px; height: 500px; ">
-
-
-        <div class="col-md-7 col-lg-7" style="padding: 80px 50px;">
-          <video width="100%" height="100%" controls>
-            <source src="./images/FoodIsLove.ogg" type="video/ogg">
-          </video>  
-        </div>
-
-        <div class="col-md-5 col-lg-5">
-        </div>
-      
-      </div>
-
--->
 
     <div>
       <div id="belcampo" class="row featurette lead-photo" style="background-image: url('./images/belcampo.png'); background-size: cover; background-position: center center; height: 600px;  border-top: 5px solid #E06043;">
         <div class="vid-trigger">
 	      <div class="col-md-7 col-lg-7" style="padding: 80px">
-		    <div class="video-play"></div>
-		    <h2>WATCH | 4:18</h2>
-		    <h4>
+		    <div class="play-indicator">
+	  	      <span class="video-play"></span>
+		      <h2>WATCH | 4:18</h2>  
+		    </div>
+
+		   	<h4>
 			  Belcampo<br>
 			  Meatco. 
 		    </h4>
@@ -158,28 +177,23 @@
       </div>
     
       <div class="container marketing" style="background: #FFF; width: 100%; padding: 80px 50px;">
-<!--
-          <video width="100%" height="100%" controls>
-            <source src="./images/sample_belcampo.ogg" type="video/ogg">
-          </video>
--->
 
-      <div class="row featurette">
-        <div class="col-md-7 col-lg-7">
-          <div class="col-md-12 col-lg-12">
+        <div class="row featurette">
+          <div class="col-md-7 col-lg-7">
+            <div class="col-md-12 col-lg-12">
 	          <div class="col-md-4 col-lg-4" style="padding: 0 20px 0 0;">
 	            <video width="100%" height="100%" loop autoplay muted="true">
-	              <source src="./images/butcher_1.ogg" type="video/ogg">
+	              <source src="./images/butcher_1.mp4" type="video/mp4">
 	            </video>
 	          </div>
 	          <div class="col-md-4 col-lg-4" style="padding: 0 20px 0 0;">
 	            <video width="100%" height="100%" loop autoplay muted="true">
-	              <source src="./images/butcher_2.ogg" type="video/ogg">
+	              <source src="./images/butcher_2.mp4" type="video/mp4">
 	            </video>
 	          </div>
 	          <div class="col-md-4 col-lg-4" style="padding: 0 20px 0 0;">
 	            <video width="100%" height="100%" loop autoplay muted="true">
-	              <source src="./images/butcher_3.ogg" type="video/ogg">
+	              <source src="./images/butcher_3.mp4" type="video/mp4">
 	            </video>
 	          </div>	          
           </div>        
@@ -188,7 +202,10 @@
 		        Traditional hand-cutting methods are used at Belcampo to craft the cuts of meat offered in their shops and restaurants.
 		     </p>
              <p>
-Everything is done to the utmost in sustainability -- they use the latest in pasture rotation philosophy, the beef is all grass-finished, and humane meat expert Temple Grandin helped design the slaughter facilities. (Credit: LAtimes.com)
+Everything is done to the utmost in sustainability -- they use the latest in pasture rotation philosophy, the beef is all grass-finished, and humane meat expert Temple Grandin helped design the slaughter facilities.
+             </p>
+             <p>
+	            Credit: LAtimes.com
              </p>
           </div>
                   
@@ -198,8 +215,8 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
         </div>
 
         <div class="col-md-5 col-lg-5" style="text-align: center; ">
-          <p class="lead" style="padding: 0 80px;">“I see everyone as my friends and neighbors… it’s less a transaction and more a conversation…”</p>
-          <small style="display: block;">
+          <p class="lead" style="padding: 0 30px; color: #973816; font-weight: bold; font-size: 180%;">“I see everyone as my friends and neighbors… it’s less a transaction and more a conversation…”</p>
+          <small style="display: block; color: #973816;">
             - <strong>Jared Standing</strong><br>
   Manager & Head Butcher<br>
   BELCAMPO | Grand Central Market<br>
@@ -217,8 +234,11 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
      <div class="vid-trigger">
 
      	  <div class="col-md-7 col-lg-7" style="padding: 80px">
-		    <div class="video-play"></div>
-		    <h2>WATCH | 4:18</h2>
+		    <div class="play-indicator">
+  	          <span class="video-play"></span>
+	          <h2>WATCH | 4:18</h2>  
+	        </div>
+	    
 		    <h4>
 			  Bombo
 		    </h4>
@@ -230,17 +250,11 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
 
       <div class="container marketing" style="background: #FFF; width: 100%; padding: 80px 50px;">
   
-<!--
-          <video width="100%" height="100%" controls>
-            <source src="./images/sample_belcampo.ogg" type="video/ogg">
-          </video>
-
--->
 
       <div class="row featurette">
-        <div class="col-md-5 col-lg-5" style="text-align: center; ">
-          <p class="lead" style="padding: 0 80px;">“I’m bringing everything I’ve done for the past 40 years and making it accessible…”</p>
-          <small style="display: block;">
+        <div class="col-md-5 col-lg-5" style="text-align: center;">
+          <p class="lead" style="padding: 0 30px;  color: #D59840; font-weight: bold; font-size: 180%;">“I’m bringing everything I’ve done for the past 40 years and making it accessible…”</p>
+          <small style="display: block; color: #D59840;">
             - <strong>Chef Mark Peel</strong><br>
     Award winning chef + owner<br>
  BOMBO | Grand Central Market<br>
@@ -270,6 +284,9 @@ Everything is done to the utmost in sustainability -- they use the latest in pas
             <p>
 Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers different varieties of clams, mussels, shrimp; squid; tuna, including yellowtail; salmon; rock cod and other local, mild-flavored white fish; black cod; and oysters by the dozen. Many of these items are featured in the dishes on Bombo’s menu. Chef Peel provides additional specials like sea bass, grouper, scallops and trout, reflecting market availability and popular demand. The seafood selection in the case is reset every day and replenished up to several times per day.
 	        </p>
+	        
+	        <p>Credit: GrandCentralMarket.com </p>
+	        
           </div>
           
         
@@ -289,8 +306,11 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 
      <div class="vid-trigger">
 	      <div class="col-md-12 col-lg-12" style="padding: 80px">
-		    <div class="video-play"></div>
-		    <h2>WATCH | 6:32</h2>
+		    <div class="play-indicator">
+  	          <span class="video-play"></span>
+	          <h2>WATCH | 1:30</h2>  
+	        </div>
+		    
 		    <h4>
 			  Grand Central<br>
 			  Market 
@@ -302,25 +322,18 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 
 
       <div class="container marketing" style="background: #FFF; width: 100%; padding: 80px 50px;">
-  
-<!--
-          <video width="100%" height="100%" controls>
-            <source src="./images/sample_belcampo.ogg" type="video/ogg">
-          </video>
 
--->
-
-      <div class="row featurette" style="padding: 0 10px;">
-        <div class="col-md-12 col-lg-12">
-          <h4 style="color: #E0A64E; text-transform: none; font-size: 350%;">These amazing vendors</h4>
-          <p style="color: #E0A64E; font-size: 120%;">will be at Grand Central Market contributing to #FOODISLOVE</p>
-          
-          <img src="./images/vendors.png" width="100%">
-        </div>
-
-      </div>
-
-    </div><!-- /.container -->
+	      <div class="row featurette" style="padding: 0 10px;">
+	        <div class="col-md-12 col-lg-12">
+	          <h4 style="color: #E0A64E; text-transform: none; font-size: 350%;">These amazing vendors</h4>
+	          <p style="color: #E0A64E; font-size: 120%;">will be at Grand Central Market contributing to #FOODISLOVE</p>
+	          
+	          <img src="./images/vendors.png" width="100%">
+	        </div>
+	
+	      </div>
+	
+	    </div><!-- /.container -->
 
     </div>
 
@@ -329,9 +342,13 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
       <div id="mow" class="row featurette lead-photo" style="background-image: url('./images/stvincent.png'); background-size: cover; background-position: center center; height: 600px; border-top: 5px solid #419BF9;">
      <div class="vid-trigger">
 
-	      <div class="col-md-7 col-lg-7" style="padding: 80px">
-		    <div class="video-play"></div>
-		    <h2>WATCH | 6:32</h2>
+	      <div class="col-md-12 col-lg-12" style="padding: 80px">
+		    <div class="play-indicator">
+  	          <span class="video-play"></span>
+	          <h2>WATCH | 3:56</h2>  
+	        </div>
+		    
+		    
 		    <h4>
 			  St. Vincent<br>
 			  Meals on Wheels 
@@ -343,52 +360,55 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
 
 
       <div class="container marketing" style="background: #FFF; width: 100%; padding: 80px;">
-  
-<!--
-          <video width="100%" height="100%" controls>
-            <source src="./images/sample_belcampo.ogg" type="video/ogg">
-          </video>
-
--->
-
-      <div class="row featurette">
-        <div class="col-md-7 col-lg-7" style="padding: 0;">
-			<p>
-			St. Vincent Meals on Wheels serves anyone in need that lives within our service area, regardless of age, race, illness, disability, religion or ability to pay.
-			</p>
-			<p>
-			All of our clients are homebound—confined to their homes because they are unable to shop or cook for themselves.
-			</p>
-			<p>
-			Most of our clients are seniors living below the poverty level. For these clients—who must each day choose between basic needs like shelter and medical care—our services offer a vital lifeline. In addition to seniors, we also serve disabled or chronically ill adults under age 60—such as multiple sclerosis, AIDS and diabetic patients.
-			</p>
-			<p>
-			For over 36 years, St. Vincent Meals on Wheels has been preparing and delivering food served with love to those who need it most. Good nutrition and daily home visits enable our clients to remain independent and in their own homes for as long as possible. 
-			</p>
-			<small>CREDIT: stvincentmealsonwheels.com</small>
-        
-        </div>
-
-        
-      </div>
-
-    </div><!-- /.container -->
+	 
+	
+	      <div class="row featurette">
+	        <div class="col-md-7 col-lg-7" style="padding: 0;">
+				<p>
+				St. Vincent Meals on Wheels serves anyone in need that lives within our service area, regardless of age, race, illness, disability, religion or ability to pay.
+				</p>
+				<p>
+				All of our clients are homebound—confined to their homes because they are unable to shop or cook for themselves.
+				</p>
+				<p>
+				Most of our clients are seniors living below the poverty level. For these clients—who must each day choose between basic needs like shelter and medical care—our services offer a vital lifeline. In addition to seniors, we also serve disabled or chronically ill adults under age 60—such as multiple sclerosis, AIDS and diabetic patients.
+				</p>
+				<p>
+				For over 36 years, St. Vincent Meals on Wheels has been preparing and delivering food served with love to those who need it most. Good nutrition and daily home visits enable our clients to remain independent and in their own homes for as long as possible. 
+				</p>
+				<p>Credit: stvincentmealsonwheels.com</p>
+	        
+	        </div>
+	        
+	        <div class="col-md-5 col-lg-5" style="text-align: center;">
+	          <p class="lead" style="padding: 0 30px;  color: #419BF9; font-weight: bold; font-size: 180%;">“I’m bringing everything I’ve done for the past 40 years and making it accessible…”</p>
+	          <small style="display: block; color: #419BF9;">
+	            - <strong>Chef Mark Peel</strong><br>
+	    Award winning chef + owner<br>
+	 BOMBO | Grand Central Market<br>
+	          </small>        
+	        </div>
+	
+	        
+	      </div>
+	
+	    </div><!-- /.container -->
 
     </div>
 
 
-    <div class="row featurette" style="background: #6ED758; padding: 70px;">
+    <div class="row featurette" style="background: #6ED758; padding: 60px;">
 	   <div class="col-md-12 col-lg-12">
          <p style="color: #FFF; font-size: 320%; font-weight: 200;">JOIN <strong>ST. VINCENT MEALS ON WHEELS</strong> AND <strong>GRAND CENTRAL MARKET</strong> AS THEY CELEBRATE <strong>#FOODISLOVE</strong></p>
        </div> 
     </div>
     
     
-    <div class="row featurette" style="padding: 60px 0 0 0; text-align: center;">
+    <div class="row featurette" style="padding: 60px;">
         <div class="col-md-6 col-lg-6">
 	       <a href="#"><img src="./images/ticket_cta.png" width="300"></a>
         </div>
-        <div class="col-md-6 col-lg-6">
+        <div class="col-md-6 col-lg-6" style="text-align: right; margin-top: 15px;">
 	      <ul style="list-style: none;">
 			  <li style="display: inline; margin-right: 10px;">
 			    <a href="#"><img src="./images/twitter.png" width="40"></a>
@@ -409,15 +429,6 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
     </div>
       
       
-    <!--  
-
-      <div class="row featurette">
-          <video width="50%" height="50%" controls>
-            <source src="./images/mowclient.mp4" type="video/mp4">
-          </video>        
-      </div>
-      
-    -->  
       
       
 
