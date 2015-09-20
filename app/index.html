@@ -581,11 +581,12 @@ Sourcing seasonal, sustainable seafood, the Bombo Fresh Seafood Market offers di
   
   
   $('#belcampo .vid-trigger').click(function() {
-    $('#belcampo').html('<video id="belcampovid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="./images/belcampo.mp4" type="video/mp4" /> </video>');
+    $('#belcampo').html('<video id="belcampovid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="./images/belcampo.mp4" type="video/mp4" /><source src="./images/belcampo.webm" type="video/webm" /> </video>');
     
     var myPlayer = videojs('belcampovid');  
     myPlayer.play();
   });
+  
 
   $('#bombo .vid-trigger').click(function() {
     $('#bombo').html('<video id="bombovid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%"><source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" /> </video>');
